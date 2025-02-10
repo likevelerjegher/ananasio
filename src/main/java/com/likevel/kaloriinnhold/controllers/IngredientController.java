@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 @Tag(name = "Ingredient", description = "Managing ingredients.")
 @RestController
+@RequestMapping("/api")
 @CrossOrigin("http://localhost:3000")
 public class IngredientController {
     private final IngredientService ingredientService;
@@ -29,9 +30,13 @@ public class IngredientController {
     }
 
     //Get
-    @GetMapping("ingredients/{id}")
+    @GetMapping("ingredient/{id}")
     public Ingredient getIngredientById(@PathVariable(value = "id") Long ingredientId) {
         return ingredientService.getIngredientById(ingredientId);
+    }
+    @GetMapping("ingredients/{name}")
+    public List<Ingredient> findIngredientByName(@PathVariable(value = "name") String name) {
+        return ingredientService.findIngredientByName(name);
     }
     @GetMapping("dishes/{dishId}/ingredients")
     public List<Ingredient> getIngredientsByDishId(@PathVariable(value = "dishId") Long dishId) {

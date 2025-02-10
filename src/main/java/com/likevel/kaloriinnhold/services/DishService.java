@@ -26,9 +26,6 @@ public class DishService {
 
     //Get
     public List<Dish> getDishes() {
-        RequestCounterService.incrementRequestCount();
-        int requestCount = RequestCounterService.getRequestCount();
-        logger.info("Current request count: {}", requestCount);
         return dishRepository.findAll();
     }
 

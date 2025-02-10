@@ -9,6 +9,10 @@ import java.util.Optional;
 @Repository
 public interface IngredientRepository extends CrudRepository<Ingredient, Long> {
     Ingredient findIngredientByName(String name);
+    
     //Optional<Ingredient> findIngredientByName(String name);
     List<Ingredient> findAll();
+
+    List<Ingredient> findByNameContainingIgnoreCase(String name);
+
 }

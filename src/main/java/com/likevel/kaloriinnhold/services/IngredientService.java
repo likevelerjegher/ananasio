@@ -47,6 +47,9 @@ public class IngredientService {
         return ingredientRepository.findAll();
     }
 
+    public List<Ingredient> findIngredientByName(String name) {
+        return ingredientRepository.findByNameContainingIgnoreCase(name);
+    }
     //Post
     public Ingredient createNewIngredient(Ingredient ingredient) {
         Optional<Ingredient> ingredientOptional = Optional.ofNullable(ingredientRepository
