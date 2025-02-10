@@ -1,4 +1,4 @@
-# Ananasio: Calorie Tracker
+# Ananasio: Macronutrient Tracker
 
 Ananasio is a calorie tracker application built with Java Spring Boot. It allows users to manage dishes and ingredients, track their nutritional values, and monitor calorie intake.
 
