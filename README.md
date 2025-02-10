@@ -50,7 +50,7 @@ Ananasio is a calorie tracker application built with Java Spring Boot. It allows
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/ananasio.git
+   git clone https://github.com/likevelerjegher/ananasio.git
    cd ananasio
    ```
 
@@ -69,7 +69,6 @@ The application will be available at `http://localhost:8080`.
 ## Configuration
 
 - The application is configured to allow CORS from `http://localhost:3000`.
-- Swagger is used for API documentation. Access it at `http://localhost:8080/swagger-ui.html`.
 
 ## Contributing
 
