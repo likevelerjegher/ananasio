@@ -55,7 +55,7 @@ Ananasio представляет собой веб-приложение для 
   - **repositories/** – Spring Data JPA репозитории для работы с базой данных.
 - **Frontend**:
 
-![Архитектурная диаграмма AsIs](https://github.com/likevelerjegher/ananasio/tree/main/docs/pictures/architactureAsIs.png)
+![Архитектурная диаграмма AsIs](https://github.com/likevelerjegher/ananasio/blob/main/docs/pictures/architactureAsIs.png)
 
 ## Часть 3. Сравнение и рефакторинг
 
