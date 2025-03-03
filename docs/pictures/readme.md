@@ -1,1 +1,1 @@
-** Pictures for documentation ** 
+**Pictures for documentation** 
