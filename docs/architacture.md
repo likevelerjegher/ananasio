@@ -40,7 +40,7 @@ Ananasio представляет собой веб-приложение для 
 - **Frontend**: работа с API, кэширование данных в `localStorage` или `IndexedDB`.
 
 ### 6. Структурная схема приложения
-![Архитектурная диаграмма ToBe](https://github.com/nstprkp/Ananasio/blob/main/docs/pictures/architactureToBe.png)
+![Архитектурная диаграмма ToBe](https://github.com/likevelerjegher/ananasio/tree/main/docs/pictures/architactureToBe.png)
 
 ## Часть 2. Анализ архитектуры («As Is»)
 
@@ -55,7 +55,7 @@ Ananasio представляет собой веб-приложение для 
   - **repositories/** – Spring Data JPA репозитории для работы с базой данных.
 - **Frontend**:
 
-![Архитектурная диаграмма AsIs](https://github.com/nstprkp/Ananasio/blob/main/docs/pictures/architactureAsIs.png)
+![Архитектурная диаграмма AsIs](https://github.com/likevelerjegher/ananasio/tree/main/docs/pictures/architactureAsIs.png)
 
 ## Часть 3. Сравнение и рефакторинг
 
