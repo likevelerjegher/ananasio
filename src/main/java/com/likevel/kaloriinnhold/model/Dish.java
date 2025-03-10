@@ -11,7 +11,6 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -56,4 +55,8 @@ public class Dish {
             joinColumns = @JoinColumn(name = "dishId"),
             inverseJoinColumns = @JoinColumn(name = "ingredientId"))
     private List<Ingredient> ingredients = new ArrayList<>();
+
+    @ManyToMany(mappedBy = "dishes", fetch = FetchType.LAZY)
+    @JsonIgnoreProperties("dishes")
+    private List<Meal> meals = new ArrayList<>();
 }

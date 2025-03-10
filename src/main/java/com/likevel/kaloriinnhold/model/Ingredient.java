@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -47,4 +48,8 @@ public class Ingredient {
     @ManyToMany(mappedBy = "ingredients",
             cascade = {CascadeType.PERSIST, CascadeType.REFRESH, CascadeType.DETACH, CascadeType.MERGE})
     private List<Dish> dishes = new ArrayList<>(); // Initialize the dishes list
+
+    @ManyToMany(mappedBy = "ingredients", fetch = FetchType.LAZY)
+    @JsonIgnoreProperties("ingredients")
+    private List<Meal> meals = new ArrayList<>();
 }
