@@ -30,11 +30,11 @@ public class IngredientController {
     }
 
     //Get
-    @GetMapping("ingredient/{id}")
+    @GetMapping("ingredients/{id}")
     public Ingredient getIngredientById(@PathVariable(value = "id") Long ingredientId) {
         return ingredientService.getIngredientById(ingredientId);
     }
-    @GetMapping("ingredients/{name}")
+    @GetMapping("ingredients/name/{name}")
     public List<Ingredient> findIngredientByName(@PathVariable(value = "name") String name) {
         return ingredientService.findIngredientByName(name);
     }
