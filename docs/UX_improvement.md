@@ -102,22 +102,12 @@
 
 **До:**
   
-![background_before]()
+![background_before](https://github.com/likevelerjegher/ananasio/blob/main/docs/pictures/UX_before.png)
 
 **После:**
   
-![background_after]()
+![background_after](https://github.com/likevelerjegher/ananasio/blob/main/docs/pictures/UX_after.png)
 
 ---
-
-### **2. Обновленные кнопки**
-
-**До:**
-  
-![image]()
-
-**После:**
-
-![image]()
   
 Также проведены дополнительные изменения для улучшения визуальной привлекательности и удобства работы с интерфейсом.
