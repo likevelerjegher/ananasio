@@ -1,37 +1,295 @@
+/* ===== THEME VARIABLES ===== */
+/* Light Theme */
+:root {
+  --bg-image-light: url('background_invert.jpg');
+  --bg-image-dark: url('background.jpg');
+  --bg-image: var(--bg-image-light);
+
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --navbar-bg: #343a40;
+  --navbar-text: #ffffff;
+
+  /* Tables */
+  --table-bg: #f8f9fa;
+  --table-text: #212529;
+  --table-border: #dee2e6;
+
+  /* Buttons */
+  --btn-primary-bg: #343a40;
+  --btn-primary-text: #ffffff;
+  --btn-outline-border: #343a40;
+  --btn-outline-text: #343a40;
+  --btn-outline-hover-bg: #343a40;
+  --btn-outline-hover-text: #ffffff;
+
+  /* Typography */
+  --heading-color: #212529;
+
+  /* Lists */
+  --list-bg: transparent;
+  --list-text: #212529;
+  --list-bullet: #212529;
+  --list-border: #dee2e6;
+
+  /* Forms */
+  --input-bg: #ffffff;
+  --input-text: #495057;
+  --input-border: #ced4da;
+  --input-focus-bg: #ffffff;
+  --input-focus-border: #80bdff;
+  --input-focus-shadow: rgba(0, 123, 255, 0.25);
+  --label-text: #495057;
+
+  /* Cards */
+  --card-bg: #ffffff;
+  --card-header-bg: #f8f9fa;
+  --card-header-text: #212529;
+  --card-border: rgba(0, 0, 0, .125);
+}
+
+
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --bg-image: var(--bg-image-dark);
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --navbar-bg: #1f1f1f;
+  --navbar-text: #dddddd;
+
+  /* Tables */
+  --table-bg: #2d2d2d;
+  --table-text: #f8f9fa;
+  --table-border: #444;
+
+  /* Buttons */
+  --btn-primary-bg: #555;
+  --btn-primary-text: #ffffff;
+  --btn-outline-border: #888;
+  --btn-outline-text: #888;
+  --btn-outline-hover-bg: #666;
+  --btn-outline-hover-text: #ffffff;
+
+  /* Typography */
+  --heading-color: #f8f9fa;
+
+  /* Lists */
+  --list-bg: transparent;
+  --list-text: #e9ecef;
+  --list-bullet: #adb5bd;
+  --list-border: #495057;
+
+  /* Forms */
+  --input-bg: #2d2d2d;
+  --input-text: #e9ecef;
+  --input-border: #555;
+  --input-focus-bg: #333;
+  --input-focus-border: #4dabf7;
+  --input-focus-shadow: rgba(77, 171, 247, 0.25);
+  --label-text: #dee2e6;
+
+  /* Cards */
+  --card-bg: #2d2d2d;
+  --card-header-bg: #1f1f1f;
+  --card-header-text: #ffffff;
+  --card-border: #444;
+}
+
+/* ===== BASE STYLES ===== */
+body {
+  background: var(--bg-image) no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-image 0.3s ease;
+  /* Smooth transition */
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+}
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+  color: var(--heading-color) !important;
+}
+.card h1,
+.card h2,
+.card h3,
+.card h4,
+.card h5,
+.card h6 {
+  color: var(--heading-color) !important;
+}
+
+/* ===== LISTS ===== */
+ul,
+ol {
+  background-color: var(--list-bg);
+  color: var(--list-text);
+  padding-left: 1.5em;
+  margin: 0.5em 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li::before {
+  color: var(--list-bullet);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+li {
+  padding: 0.25em 0;
+  color: inherit;
+}
+
+/* ===== CARDS ===== */
+.card {
+  background-color: var(--card-bg) !important;
+  border-color: var(--card-border) !important;
+}
+
+.card-header {
+  background-color: var(--card-header-bg) !important;
+  color: var(--card-header-text) !important;
+  border-bottom-color: var(--card-border) !important;
+}
+
+.list-group-item {
+  background-color: var(--card-bg) !important;
+  color: var(--text-color) !important;
+  border-color: var(--card-border) !important;
+}
+
+/* ===== TABLES ===== */
+.table {
+  background-color: var(--table-bg) !important;
+  color: var(--table-text) !important;
+  border-color: var(--table-border) !important;
+}
+
+.table th,
+.table td {
+  background-color: transparent !important;
+  color: inherit !important;
+  border-color: var(--table-border) !important;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+[data-theme="dark"] .table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* ===== FORMS ===== */
+label {
+  color: var(--label-text);
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+input:not([type="checkbox"]):not([type="radio"]),
+textarea,
+select {
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  background-color: var(--input-bg) !important;
+  color: var(--input-text) !important;
+  border: 1px solid var(--input-border) !important;
+  border-radius: 0.25rem;
+  transition: all 0.15s ease-in-out;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  background-color: var(--input-focus-bg) !important;
+  border-color: var(--input-focus-border) !important;
+  box-shadow: 0 0 0 0.2rem var(--input-focus-shadow) !important;
+  outline: 0;
+}
+
+/* Fix for autofill */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--input-text) !important;
+  -webkit-box-shadow: 0 0 0px 1000px var(--input-bg) inset !important;
+}
+
+/* Placeholder */
+::placeholder {
+  color: color-mix(in srgb, var(--input-text) 50%, transparent) !important;
+}
+
+/* ===== BUTTONS ===== */
+.btn-dark {
+  background-color: var(--btn-primary-bg) !important;
+  color: var(--btn-primary-text) !important;
+  border-color: var(--btn-primary-bg) !important;
+}
+
+.btn-outline-dark {
+  color: var(--btn-outline-text) !important;
+  border-color: var(--btn-outline-border) !important;
+}
+
+.btn-outline-dark:hover {
+  background-color: var(--btn-outline-hover-bg) !important;
+  color: var(--btn-outline-hover-text) !important;
+}
+
+/* ===== LAYOUT ===== */
+.container {
+  background-color: transparent !important;
+  padding: 20px;
+}
+
+.border {
+  background-color: var(--bg-color) !important;
+  border: 1px solid var(--table-border) !important;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+/* ===== UTILITY CLASSES ===== */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+/* ===== APP SPECIFIC ===== */
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
